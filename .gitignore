@@ -8,3 +8,10 @@
 /data/db/virtuoso.log
 /data/db/virtuoso.pxa
 /data/db/virtuoso.trx
+
+.dba_pwd_set
+
+# app files
+__pycache__
+build
+*.pyc
