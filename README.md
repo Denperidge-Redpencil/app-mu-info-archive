@@ -23,12 +23,5 @@ Boot your microservices-enabled system using docker-compose.
 
 You can shut down using `docker-compose stop` and remove everything using `docker-compose rm`.
 
- ## Reference
-
- ### Terminology
-
- | Term            | Meaning |
- | --------------- | ------- |
- | Repo            | The class to wrap all info of a repository in |
- | reposource      | A source for one or more repositories. This encompasses not only the host (e.g. GitHub, Gitea), as well as any info that is needed to find the repository (e.g. one or multiple repository ownernames + reponames) |
- | (Repo.)Category | This is an abstract, self definable thing. This refers to how *you* would like to sort and categorise the repository |
+## Reference
+Please check the docstrings and typing included in the code!
