@@ -24,4 +24,19 @@ Boot your microservices-enabled system using docker-compose.
 You can shut down using `docker-compose stop` and remove everything using `docker-compose rm`.
 
 ## Reference
-Please check the docstrings and typing included in the code!
+### Repo model
+This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) and [the Repo class](app/Repo.py). Here's a human-readable overview!
+| Attribute          | Type             | Description |
+| ------------------ | ---------------- | ----------- |
+| category           | `URI`            | What type of repository it is. 
+| name               | `String`         | Repository and - by extension - microservice name. |
+| repo-url            | `String/URL`    | Repository url |
+| homepage-url       | `String/URL`     | Homepage url |
+| available_versions | `Array[Revision]`| Available versions for the microservice. Should include the Docker tags |
+| installed_version  | `Revision`       | The version that is installed! |
+| readme?            | `String`         | Content of the README |
+| documentation?     | `String`?        | splitted up readme thing for each version (divio-docs-gen) |
+
+
+
+Please also check the docstrings and typing included in the code!
