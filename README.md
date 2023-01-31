@@ -24,6 +24,8 @@ Boot your microservices-enabled system using docker-compose.
 You can shut down using `docker-compose stop` and remove everything using `docker-compose rm`.
 
 ## Reference
+Please also check the docstrings and typing included in the code!
+
 ### Repo model
 This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) and [the Repo class](app/Repo.py). Here's a human-readable overview!
 | Attribute          | Type             | Description |
@@ -47,5 +49,15 @@ This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) 
 | documentation?     | `String`?        | splitted up readme thing for each version (divio-docs-gen) |
 
 
+### overrides.conf
+You can configure [overrides.conf](overrides.conf) in case you break your own Category naming convention, or want to archive specific repositories without changing the git repository.
+The syntax is as follows:
+```conf
+[regex-.*-for-repo-name]
+Category=tools  # Optional, reassigns to the category with specified 
+ImageName=mu-login-service  # Optional, overrides the container image name for this repo
+```
 
-Please also check the docstrings and typing included in the code!
+
+## License
+This project is licensed under [the MIT License](LICENSE).
