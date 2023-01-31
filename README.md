@@ -58,6 +58,5 @@ Category=tools  # Optional, reassigns to the category with specified
 ImageName=mu-login-service  # Optional, overrides the container image name for this repo
 ```
 
-
 ## License
 This project is licensed under [the MIT License](LICENSE).
