@@ -26,7 +26,7 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/microservices/"
   end
 
-  post,patch "/microservices/*path" do
+  post "/microservices/*path" do
     Proxy.forward conn, path, "http://resource/microservices/"
   end
 
