@@ -30,8 +30,17 @@ This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) 
 | ------------------ | ---------------- | ----------- |
 | category           | `URI`            | What type of repository it is. 
 | name               | `String`         | Repository and - by extension - microservice name. |
-| repo-url            | `String/URL`    | Repository url |
 | homepage-url       | `String/URL`     | Homepage url |
+||||
+| repo-url            | `String/URL`    | Repository url |
+| repo-branch         | `String`        | Branch to be used in production? |
+| repo-tag            | `String`        | Release tag from the repository |
+||||
+| image-url           | `String/URL`    | Container image url |
+| image-tag           | `String`       | Release tag for the container |
+
+
+
 | available_versions | `Array[Revision]`| Available versions for the microservice. Should include the Docker tags |
 | installed_version  | `Revision`       | The version that is installed! |
 | readme?            | `String`         | Content of the README |
