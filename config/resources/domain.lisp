@@ -7,7 +7,7 @@
                 (:category :url ,(s-prefix "ext:category"))
                 (:repo-url :url ,(s-prefix "ext:repositoryUrl"))
                 (:image-url :url ,(s-prefix "ext:imageUrl"))
-                (:homepage-url :url ,(s-prefix "ext:homepageUrl"))
+                (:homepage-url :url ,(s-prefix "ext:homepageUrl")))
   :has-many `((revision :via ,(s-prefix "ext:hasRevision")
                         :as "revisions")
               (command :via ,(s-prefix "ext:hasCommand")
