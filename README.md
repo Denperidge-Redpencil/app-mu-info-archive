@@ -28,23 +28,31 @@ Please also check the docstrings and typing included in the code!
 
 ### Repo model
 This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) and [the Repo class](app/Repo.py). Here's a human-readable overview!
-| Attribute          | Type             | Description |
-| ------------------ | ---------------- | ----------- |
-| category           | `URI`            | What type of repository it is. 
-| name               | `String`         | Repository and - by extension - microservice name. |
-| homepage-url       | `String/URL`     | Homepage url |
+| Attribute          | Type             | Description                                        |
+| ------------------ | ---------------- | ---------------------------------------------------|
+|**Describe the repo**|||
+| uuid (indirectly)  | `String`         | UUID for the graph name.                                   |
+| title              | `String`         | Repository name.                                   |
+| description        | `String`         | A small description of what the repository is for. |
+| category           | `URI`            | What type of repository it is.                     |
 ||||
-| repo-url            | `String/URL`    | Repository url |
-| repo-branch         | `String`        | Branch to be used in production? |
-| repo-tag            | `String`        | Release tag from the repository |
+|**Link to relevant URLs**|||
+| repo-url            | `String/URL`    | Repository url        |
+| image-url           | `String/URL`    | Container image url   |
+| homepage-url       | `String/URL`     | Homepage url          |
 ||||
-| image-url           | `String/URL`    | Container image url |
-| image-tag           | `String`       | Release tag for the container |
-
-
-
-| available_versions | `Array[Revision]`| Available versions for the microservice. Should include the Docker tags |
+| **Other** |||
 | installed_version  | `Revision`       | The version that is installed! |
+
+---
+
+### Revision model
+These will be given to a repo in the triplestoer, and allow to read the documentation of every release 
+| Attribute          | Type             | Description       |
+| ------------------ | ---------------- |-------------------|
+| image-tag           | `String`        | Revision release tag for the image |
+| repo-tag            | `String`        | Revision release tag from the repository |
+| 
 | readme?            | `String`         | Content of the README |
 | documentation?     | `String`?        | splitted up readme thing for each version (divio-docs-gen) |
 
