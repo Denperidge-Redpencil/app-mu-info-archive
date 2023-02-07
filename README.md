@@ -50,12 +50,16 @@ This is defined in [config/resources/domain.lisp](config/resources/domain.lisp) 
 These will be given to a repo in the triplestoer, and allow to read the documentation of every release 
 | Attribute          | Type             | Description       |
 | ------------------ | ---------------- |-------------------|
-| image-tag           | `String`        | Revision release tag for the image |
-| repo-tag            | `String`        | Revision release tag from the repository |
+| image-tag           | `String`        | Revision release *tag* for the image |
+| image-url           | `String/URL`    | Revision release *url* for the image |
+| repo-tag            | `String`        | Revision release *tag* from the repository |
+| repo-url            | `String/URL`    | Revision release *url* from the repository |
 | 
-| readme?            | `String`         | Content of the README |
+| readme             | `String`         | Content of the README |
 | documentation?     | `String`?        | splitted up readme thing for each version (divio-docs-gen) |
 
+
+Default? Master/main?
 
 ### overrides.conf
 You can configure [overrides.conf](overrides.conf) in case you break your own Category naming convention, or want to archive specific repositories without changing the git repository.
